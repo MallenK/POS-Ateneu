@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body {
+  @apply bg-slate-100 text-slate-900 antialiased;
+  /* Táctil: sin retardo de doble toque ni selección accidental de texto. */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+input { user-select: text; }
